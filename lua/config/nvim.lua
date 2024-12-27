@@ -1,3 +1,5 @@
+local vim = vim
+
 local default_indent = 4
 
 vim.opt.guifont = "Fira Code:h14"
