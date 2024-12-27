@@ -17,7 +17,6 @@ return {
                     ["gitsigns.nvim"] = true,
                     ["neogit"] = true,
                     ["todo-comments.nvim"] = true,
-                    ["lazy.nvim"] = true,
                     ["telescope.nvim"] = true,
                 }
             })
