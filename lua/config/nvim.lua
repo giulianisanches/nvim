@@ -15,6 +15,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.opt.guifont = "Fira Code:h14"
+vim.opt.termguicolors = true
 vim.opt.timeout = false
 vim.opt.wrap = false
 vim.opt.tabstop = default_indent
