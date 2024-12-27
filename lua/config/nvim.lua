@@ -10,6 +10,10 @@ if vim.fn.has("mac") then
     meta_chr_paste = "<D-v>"
 end
 
+-- disable netrw at the very start of your init.lua (needed by nvim-tree)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.opt.guifont = "Fira Code:h14"
 vim.opt.timeout = false
 vim.opt.wrap = false
