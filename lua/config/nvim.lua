@@ -10,10 +10,6 @@ if vim.fn.has("mac") then
     meta_chr_paste = "<D-v>"
 end
 
--- disable netrw at the very start of your init.lua (needed by nvim-tree)
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 vim.opt.guifont = "Fira Code:h14"
 vim.opt.termguicolors = true
 vim.opt.timeout = false
@@ -47,4 +43,4 @@ vim.keymap.set("v", meta_chr_copy, '"+y')
 vim.keymap.set("n", meta_chr_paste, '"+p')
 
 vim.cmd("filetype plugin indent on")
-vim.cmd("colorscheme dracula")
+vim.cmd("colorscheme dracula-nvim")
