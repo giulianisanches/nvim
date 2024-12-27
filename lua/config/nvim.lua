@@ -30,3 +30,9 @@ vim.keymap.set("ca", "wQ", "wq")
 vim.keymap.set("ca", "Q", "q")
 
 vim.cmd("filetype plugin indent on")
+vim.cmd("colorscheme dracula")
+-- paste from clipboard
+-- nnoremap <D-v> "+p
+-- nmap <c-c> "+y
+-- vmap <c-c> "+y
+-- nmap <c-v> "+p
