@@ -1,24 +1,28 @@
 return {
     {
-        "coffebar/neovim-project",
-        opts = {
-            projects = {
-                "~/dev/src/*",
-            },
-            picker = {
-                type = "telescope",
-            }
-        },
-        init = function()
-            -- enable saving the state of plugins in the session
-            vim.opt.sessionoptions:append("globals") -- save global variables that start with an uppercase letter and contain at least one lowercase letter.
-        end,
+        "nvim-telescope/telescope-project.nvim",
         dependencies = {
-            { "nvim-lua/plenary.nvim" },
-            { "nvim-telescope/telescope.nvim" },
-            { "Shatur/neovim-session-manager" },
+            "nvim-telescope/telescope.nvim",
         },
-        lazy = false,
-        priority = 100,
+        config = function()
+            local project_actions = require("telescope._extensions.project.actions")
+            local vim = vim
+            require('telescope').setup {
+                project = {
+                    base_dirs = {
+                        { path = '~/dev/src', max_depth = 4 },
+                    },
+                    hidden_files = true, -- default: false
+                    theme = vim.g.colors_name,
+                    order_by = "asc",
+                    search_by = "title",
+                    sync_with_nvim_tree = true, -- default false
+                    -- -- default for on_project_selected = find project files
+                    -- on_project_selected = function(prompt_bufnr)
+                    --     project_actions.change_working_directory(prompt_bufnr, false)
+                    -- end,
+                }
+            }
+        end,
     },
 }
