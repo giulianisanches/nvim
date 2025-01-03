@@ -1,6 +1,7 @@
 return {
     {
-        "nvim-telescope/telescope-project.nvim",
+        -- i will temporary use my fork until a PR that i'm watching gets merged
+        "giulianisanches/telescope-project.nvim",
         dependencies = {
             "nvim-telescope/telescope.nvim",
         },
@@ -20,7 +21,7 @@ return {
                         hidden_files = true,
                         order_by = "asc",
                         sync_with_nvim_tree = true,
-                        display_type = "full",
+                        display_type = "two-segment",
                         hide_workspace = true
                         -- -- default for on_project_selected = find project files
                         -- on_project_selected = function(prompt_bufnr)
