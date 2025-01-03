@@ -7,7 +7,6 @@ return {
         },
         config = function()
             -- local project_actions = require("telescope._extensions.project.actions")
-            local vim = vim
 
             require('telescope').setup {
                 -- defaults = {
