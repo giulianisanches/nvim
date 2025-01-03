@@ -17,11 +17,11 @@ return {
                         base_dirs = {
                             { path = '~/dev/src', max_depth = 4 },
                         },
-                        hidden_files = true, -- default: false
-                        -- theme = vim.g.colors_name,
+                        hidden_files = true,
                         order_by = "asc",
-                        sync_with_nvim_tree = true, -- default false
+                        sync_with_nvim_tree = true,
                         display_type = "full",
+                        hide_workspace = true
                         -- -- default for on_project_selected = find project files
                         -- on_project_selected = function(prompt_bufnr)
                         --     project_actions.change_working_directory(prompt_bufnr, false)
@@ -29,13 +29,6 @@ return {
                     }
                 }
             }
-
-            vim.api.nvim_set_keymap(
-                'n',
-                '<D-P>',
-                ":lua require'telescope'.extensions.project.project{}<CR>",
-                { noremap = true, silent = true }
-            )
         end,
     },
 }

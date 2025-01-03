@@ -63,3 +63,4 @@ Map("n", "<leader>fc", "<cmd> Telescope colorschemes <CR>")
 
 -- nvim-tree
 Map("n", "<leader>tt", "<cmd> NvimTreeToggle <CR>")
+Map("n", "<D-P>", "<cmd> lua require'telescope'.extensions.project.project{} <CR>")
