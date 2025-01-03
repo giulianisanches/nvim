@@ -1,4 +1,4 @@
--- lots of inspiration for kb from
+-- lots of inspiration from
 -- https://medium.com/unixification/must-have-neovim-keymaps-51c283394070
 
 local vim = vim
@@ -64,3 +64,6 @@ Map("n", "<leader>fc", "<cmd> Telescope colorschemes <CR>")
 -- nvim-tree
 Map("n", "<leader>tt", "<cmd> NvimTreeToggle <CR>")
 Map("n", "<D-P>", "<cmd> lua require'telescope'.extensions.project.project{} <CR>")
+
+-- neogit
+Map("n", "<leader>ng", "<cmd> Neogit <CR>")
