@@ -8,6 +8,9 @@ if vim.g.neovide then
     require("config.neovide")
 end
 
+
 require("config.lazy")
-require("config.nvim")
 require("config.keymap")
+require("config.nvim")
+
+require("telescope").load_extension("project")
