@@ -4,10 +4,10 @@ return {
         lazy = false,
         priority = 1000,
         config = function()
-            local dracula = require "dracula"
+            local configs = require "dracula"
             local vim = vim
 
-            dracula.setup({
+            configs.setup({
                 transparent = false,
                 plugins = {
                     ["nvim-treesitter"] = true,

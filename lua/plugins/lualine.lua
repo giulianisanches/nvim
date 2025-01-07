@@ -4,9 +4,9 @@ return {
         dependencies = { 'nvim-tree/nvim-web-devicons' },
         config = function()
             local vim = vim
-            local lualine = require "lualine"
+            local configs = require("lualine")
 
-            lualine.setup {
+            configs.setup {
                 options = {
                     theme = vim.g.colors_name,
                 }

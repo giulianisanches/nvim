@@ -7,9 +7,9 @@ return {
             "nvim-tree/nvim-web-devicons",
         },
         config = function()
-            local ntree = require "nvim-tree"
+            local configs = require("nvim-tree")
 
-            ntree.setup {
+            configs.setup {
                 sync_root_with_cwd = true,
                 respect_buf_cwd = true,
                 update_focused_file = {

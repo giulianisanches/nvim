@@ -6,10 +6,10 @@ return {
             "nvim-telescope/telescope.nvim",
         },
         config = function()
-            local telescope = require("telescope")
+            local configs = require("telescope")
             -- local project_actions = require("telescope._extensions.project.actions")
 
-            telescope.setup {
+            configs.setup {
                 -- defaults = {
                 --     path_display = { "smart" },
                 -- },

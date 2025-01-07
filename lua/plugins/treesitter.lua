@@ -4,9 +4,9 @@ return {
         build = ":TSUpdate",
         cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
         config = function()
-            local treesitter = require("nvim-treesitter.configs")
+            local configs = require("nvim-treesitter.configs")
 
-            treesitter.setup {
+            configs.setup {
                 options = {
                     ensure_installed = {
                         "c",
@@ -24,7 +24,10 @@ return {
                         "markdown",
                     },
                     sync_install = false,
-                    highlight = { enable = true },
+                    highlight = {
+                        enable = true,
+                        additional_vim_regex_highlighting = false,
+                    },
                     indent = { enable = true },
                 }
             }
