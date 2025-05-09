@@ -1,6 +1,7 @@
 return {
     {
         -- i will temporary use my fork until a PR that i'm watching gets merged
+        -- https://github.com/nvim-telescope/telescope-project.nvim/pull/168
         "giulianisanches/telescope-project.nvim",
         dependencies = {
             "nvim-telescope/telescope.nvim",
