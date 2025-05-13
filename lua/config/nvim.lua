@@ -2,7 +2,7 @@ local vim = vim
 
 local default_indent = 4
 
-vim.opt.guifont = "Fira Code:h14"
+vim.opt.guifont = "FiraMono Nerd Font:h18"
 vim.opt.termguicolors = true
 vim.opt.timeout = false
 vim.opt.wrap = false
