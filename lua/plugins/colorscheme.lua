@@ -1,15 +1,15 @@
 return {
     {
-        'maxmx03/solarized.nvim',
+        'olimorris/onedarkpro.nvim',
         lazy = false,
         priority = 1000,
         config = function()
-            local configs = require("solarized")
+            local configs = require("onedarkpro")
             local vim = vim
 
             vim.opt.background = 'dark'
             configs.setup({ })
-            vim.cmd.colorscheme 'solarized'
+            vim.cmd.colorscheme 'onedark'
         end
     },
 }
