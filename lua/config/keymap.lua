@@ -7,6 +7,8 @@ local vim = vim
 local meta_chr_copy = "<C-c>"
 local meta_chr_paste = "<C-v>"
 
+local telescope_builtin = require("telescope.builtin")
+
 if vim.fn.has("mac") then
     meta_chr_copy = "<D-c>"
     meta_chr_paste = "<D-v>"
@@ -52,14 +54,12 @@ Map("v", "<", "<gv")
 Map("v", ">", ">gv")
 
 -- Telescope
-Map("n", "<leader>ff", "<cmd> Telescope find_files <CR>")
-Map("n", "<leader>fa", "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>")
-Map("n", "<leader>fe", "<cmd> Telescope file_browser <CR>")
-Map("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
-Map("n", "<leader>fb", "<cmd> Telescope buffers <CR>")
-Map("n", "<leader>fh", "<cmd> Telescope help_tags <CR>")
-Map("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
-Map("n", "<leader>fc", "<cmd> Telescope colorschemes <CR>")
+Map("n", "<leader>ff", telescope_builtin.find_files)
+Map("n", "<leader>fw", telescope_builtin.live_grep)
+Map("n", "<leader>fb", telescope_builtin.buffers)
+Map("n", "<leader>fh", telescope_builtin.help_tags)
+Map("n", "<leader>fo", telescope_builtin.oldfiles)
+Map("n", "<leader>fc", telescope_builtin.colorscheme)
 
 -- nvim-tree
 Map("n", "<leader>tt", "<cmd> NvimTreeToggle <CR>")
