@@ -25,7 +25,9 @@ return {
                     "c_sharp",
                     "dockerfile",
                     "markdown",
-                    "json"
+                    "json",
+                    "yaml",
+                    "hcl"
                 },
                 sync_install = false,
                 highlight = {
