@@ -63,7 +63,7 @@ Map("n", "<leader>fc", telescope_builtin.colorscheme)
 
 -- nvim-tree
 Map("n", "<leader>tt", "<cmd> NvimTreeToggle <CR>")
-Map("n", "<D-P>", "<cmd> lua require'telescope'.extensions.project.project{} <CR>")
+Map("n", "<D-P>", "<cmd> NeovimProjectDiscover <CR>")
 
 -- neogit
 Map("n", "<leader>ng", "<cmd> Neogit <CR>")
