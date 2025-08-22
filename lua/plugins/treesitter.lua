@@ -27,7 +27,8 @@ return {
                     "markdown",
                     "json",
                     "yaml",
-                    "hcl"
+                    "hcl",
+                    "powershell"
                 },
                 sync_install = false,
                 highlight = {
