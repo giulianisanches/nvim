@@ -9,10 +9,12 @@ return {
         opts = {
             ensure_installed = {
                 "lua_ls",
+                "vimls",
                 "pyright",
                 "ts_ls",
                 "terraformls",
                 "gopls",
+                "powershell_es",
             },
         },
         dependencies = {
