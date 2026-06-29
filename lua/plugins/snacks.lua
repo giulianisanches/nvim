@@ -10,13 +10,11 @@ return {
         grep = {
           hidden = true,
         },
+        explorer = {
+          hidden = true,
+        },
+        exclude = { "node_modules", ".git" },
       },
-    },
-    explorer = {
-      hidden = true,
-      ignored = true,
-      exclude = { "node_modules", ".git" },
     },
   },
 }
-
