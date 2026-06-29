@@ -3,6 +3,20 @@ return {
   opts = {
     picker = {
       layout = { preset = "select" }, -- use the telescope layout preset
+      sources = {
+        files = {
+          hidden = true,
+        },
+        grep = {
+          hidden = true,
+        },
+      },
+    },
+    explorer = {
+      hidden = true,
+      ignored = true,
+      exclude = { "node_modules", ".git" },
     },
   },
 }
+
