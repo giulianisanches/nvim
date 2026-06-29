@@ -10,11 +10,14 @@ return {
       terminal = {
         ---@module "snacks"
         ---@type snacks.win.Config|{}
+        diff_opts = {
+          keep_terminal_focus = false,
+        },
         snacks_win_opts = {
           position = "float",
           width = 0.9,
           height = 0.9,
-          border = "double",
+          border = "single",
           keys = {
             claude_hide = {
               toggle_key,
@@ -30,4 +33,3 @@ return {
     },
   },
 }
-
