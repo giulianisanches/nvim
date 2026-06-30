@@ -10,9 +10,6 @@ return {
       terminal = {
         ---@module "snacks"
         ---@type snacks.win.Config|{}
-        diff_opts = {
-          keep_terminal_focus = false,
-        },
         snacks_win_opts = {
           position = "float",
           width = 0.9,
