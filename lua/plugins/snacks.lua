@@ -1,4 +1,4 @@
-local excluded = { "node_modules", ".git" }
+local excluded = { "node_modules", ".git", "." }
 return {
   "folke/snacks.nvim",
   opts = {
