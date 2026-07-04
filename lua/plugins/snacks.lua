@@ -1,4 +1,4 @@
-local excluded = { "node_modules", ".git", "." }
+local excluded = { "node_modules", ".git", ".venv", ".terraform" }
 return {
   "folke/snacks.nvim",
   opts = {
@@ -20,6 +20,22 @@ return {
           dev = { "~/dev/src" },
           patterns = { ".git", ".hg", ".bzr" },
           max_depth = 4,
+          confirm = function(picker, item)
+            Snacks.picker.actions.load_session(picker, item)
+            local all_bufs_ids = vim.api.nvim_list_bufs()
+            local valid_bufs = vim.tbl_filter(function(buf)
+              return vim.api.nvim_buf_is_valid(buf)
+                and vim.bo[buf].buftype == ""
+                and vim.api.nvim_buf_get_name(buf) ~= ""
+            end, all_bufs_ids)
+            local del_bufs = vim.tbl_filter(function(buf)
+              return item.file ~= vim.fs.root(buf, ".git")
+            end, valid_bufs)
+            picker:close()
+            for _, buf in ipairs(del_bufs) do
+              vim.api.nvim_buf_delete(buf, { force = true })
+            end
+          end,
         },
       },
     },
