@@ -31,9 +31,17 @@ return {
             local del_bufs = vim.tbl_filter(function(buf)
               return item.file ~= vim.fs.root(buf, ".git")
             end, valid_bufs)
+
             picker:close()
+
             for _, buf in ipairs(del_bufs) do
               vim.api.nvim_buf_delete(buf, { force = true })
+            end
+
+            local terminal = require("claudecode.terminal")
+            local active_bufnr = terminal.get_active_terminal_bufnr and terminal.get_active_terminal_bufnr()
+            if active_bufnr then
+              vim.cmd("ClaudeCodeSendText /quit")
             end
           end,
         },
