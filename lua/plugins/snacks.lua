@@ -38,8 +38,10 @@ return {
               vim.api.nvim_buf_delete(buf, { force = true })
             end
 
-            local terminal = require("claudecode.terminal")
-            local active_bufnr = terminal.get_active_terminal_bufnr and terminal.get_active_terminal_bufnr()
+            local claudecode_loaded, terminal = pcall(require, "claudecode.terminal")
+            local active_bufnr = claudecode_loaded
+              and terminal.get_active_terminal_bufnr
+              and terminal.get_active_terminal_bufnr()
             if active_bufnr then
               vim.cmd("ClaudeCodeSendText /quit")
             end
