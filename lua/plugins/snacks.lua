@@ -35,14 +35,6 @@ return {
               return item.file ~= vim.fs.root(buf, ".git")
             end, valid_bufs)
 
-            local claudecode_loaded, terminal = pcall(require, "claudecode.terminal")
-            local active_bufnr = claudecode_loaded
-              and terminal.get_active_terminal_bufnr
-              and terminal.get_active_terminal_bufnr()
-            if active_bufnr then
-              vim.cmd("ClaudeCodeSendText /quit")
-            end
-
             picker:close()
 
             for _, buf in ipairs(del_bufs) do
